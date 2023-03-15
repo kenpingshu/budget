@@ -10,6 +10,7 @@ class BudgetService {
 		}
 		const budgetRepo = new BudgetRepo();
 		const budgets = budgetRepo.getAll()
+		console.log({budgets})
 		const keys = this.getKeys(startDate, endDate)
 		const searchResult = budgets.filter((budget) => {
 			return keys.indexOf(budget.yearMonth) > -1
